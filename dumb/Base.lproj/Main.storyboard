@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="firstPageVC" customModule="dumb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amy" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-Aa-2kB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amy" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-Aa-2kB">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Fc-qC-hsR">
-                                <rect key="frame" x="0.0" y="156" width="414" height="171"/>
+                                <rect key="frame" x="0.0" y="112" width="834" height="171"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cef-fe-TzZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="ace-jn-h4K"/>
                                         </constraints>
@@ -32,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dumbo?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3D-Ug-Pom">
-                                        <rect key="frame" x="0.0" y="75" width="414" height="96"/>
+                                        <rect key="frame" x="0.0" y="75" width="834" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="96" id="HFy-Ml-PPl"/>
                                         </constraints>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCc-aa-LHA" customClass="Buttons" customModule="dumb" customModuleProvider="target">
-                                <rect key="frame" x="258" y="475" width="85" height="66"/>
+                                <rect key="frame" x="678" y="431" width="85" height="66"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
@@ -68,11 +68,11 @@
                                     <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="mov:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofi-Mu-F7F"/>
+                                    <action selector="noButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQF-hz-qCT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJo-FQ-krf" customClass="Buttons" customModule="dumb" customModuleProvider="target">
-                                <rect key="frame" x="71" y="475" width="85" height="66"/>
+                                <rect key="frame" x="71" y="431" width="85" height="66"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
@@ -87,6 +87,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="YES">
                                     <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="LlH-fz-5l4" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="LsE-k9-oZO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -112,49 +115,76 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="x6s-oW-Duu" kind="presentation" identifier="dancingButtonSegueViewController" animates="NO" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="dtB-EN-zTp"/>
+                        <segue destination="x6s-oW-Duu" kind="presentation" identifier="upButton" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="MDr-Ca-2sk"/>
+                        <segue destination="sJR-aP-lpP" kind="presentation" identifier="downButton" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="6Kg-jJ-IhU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-420.28985507246381" y="78.348214285714278"/>
         </scene>
+        <!--Yes ButtonVC-->
+        <scene sceneID="Zgx-VB-vJZ">
+            <objects>
+                <viewController id="LlH-fz-5l4" customClass="yesButtonVC" customModule="dumb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KqA-cV-JNI">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amy" translatesAutoresizingMaskIntoConstraints="NO" id="7Vp-zB-OCm">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1Mv-84-TQS">
+                                <rect key="frame" x="0.0" y="112" width="834" height="242"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAHA!!😂" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpx-K2-Jto">
+                                        <rect key="frame" x="259" y="0.0" width="316.5" height="96"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="70"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I knew It" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6w-9u-8Ox">
+                                        <rect key="frame" x="276.5" y="146" width="281.5" height="96"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="70"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VKv-Iy-asP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VKv-Iy-asP" firstAttribute="trailing" secondItem="1Mv-84-TQS" secondAttribute="trailing" id="GuO-Ja-8AX"/>
+                            <constraint firstItem="1Mv-84-TQS" firstAttribute="top" secondItem="VKv-Iy-asP" secondAttribute="top" constant="112" id="L9K-1L-gH4"/>
+                            <constraint firstItem="1Mv-84-TQS" firstAttribute="leading" secondItem="KqA-cV-JNI" secondAttribute="leading" id="pwK-H3-bgn"/>
+                            <constraint firstItem="7Vp-zB-OCm" firstAttribute="trailing" secondItem="VKv-Iy-asP" secondAttribute="trailing" id="rtB-1k-g24"/>
+                            <constraint firstItem="7Vp-zB-OCm" firstAttribute="leading" secondItem="VKv-Iy-asP" secondAttribute="leading" id="sUI-V7-YeZ"/>
+                            <constraint firstAttribute="bottom" secondItem="7Vp-zB-OCm" secondAttribute="bottom" id="sp0-ft-k20"/>
+                            <constraint firstItem="7Vp-zB-OCm" firstAttribute="top" secondItem="KqA-cV-JNI" secondAttribute="top" id="tN1-CE-kQs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14c-mP-B4Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460.86956521739131" y="917.41071428571422"/>
+        </scene>
         <!--Up Button-->
         <scene sceneID="ugP-dI-LtL">
             <objects>
                 <viewController id="x6s-oW-Duu" customClass="upButton" customModule="dumb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ekS-2a-tuX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="amy" translatesAutoresizingMaskIntoConstraints="NO" id="KEv-GJ-wyY">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amy" translatesAutoresizingMaskIntoConstraints="NO" id="hmR-c2-b2B">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjk-2Y-Zzj" customClass="Buttons" customModule="dumb" customModuleProvider="target">
-                                <rect key="frame" x="71" y="475" width="85" height="66"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="41u-DC-rFr"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="4vz-TW-8qG"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="XSI-yQ-fTE"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="66" id="k1y-sl-lRc"/>
-                                    <constraint firstAttribute="width" constant="85" id="zv5-6H-Ook"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="YES">
-                                    <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
-                                </buttonConfiguration>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fxe-7V-Yuu">
-                                <rect key="frame" x="0.0" y="156" width="414" height="171"/>
+                                <rect key="frame" x="0.0" y="112" width="834" height="171"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5L-4d-d0C">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="Ft9-Yt-2tn"/>
                                         </constraints>
@@ -163,7 +193,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dumbo?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSz-sU-Xf1">
-                                        <rect key="frame" x="0.0" y="75" width="414" height="96"/>
+                                        <rect key="frame" x="0.0" y="75" width="834" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="96" id="8Sc-Ac-F5Z"/>
                                         </constraints>
@@ -182,8 +212,30 @@
                                     <constraint firstItem="vSz-sU-Xf1" firstAttribute="top" secondItem="f5L-4d-d0C" secondAttribute="bottom" id="qiw-Cb-dDo"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjk-2Y-Zzj" customClass="Buttons" customModule="dumb" customModuleProvider="target">
+                                <rect key="frame" x="71" y="431" width="85" height="66"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="41u-DC-rFr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="4vz-TW-8qG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="XSI-yQ-fTE"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="66" id="k1y-sl-lRc"/>
+                                    <constraint firstAttribute="width" constant="85" id="zv5-6H-Ook"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="YES">
+                                    <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="LlH-fz-5l4" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="l70-CP-sTR"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoc-Sw-p7h" customClass="Buttons" customModule="dumb" customModuleProvider="target">
-                                <rect key="frame" x="244" y="335" width="85" height="66"/>
+                                <rect key="frame" x="664" y="291" width="85" height="66"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
@@ -201,8 +253,7 @@
                                     <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="mov:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mn9-QE-73S"/>
-                                    <segue destination="sJR-aP-lpP" kind="presentation" animates="NO" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="jX8-f2-l5P"/>
+                                    <action selector="noButton:" destination="x6s-oW-Duu" eventType="touchUpInside" id="1m3-nP-ty1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -211,15 +262,23 @@
                         <constraints>
                             <constraint firstItem="fjk-2Y-Zzj" firstAttribute="top" secondItem="Fxe-7V-Yuu" secondAttribute="bottom" constant="148" id="1vR-zf-pu9"/>
                             <constraint firstItem="Fxe-7V-Yuu" firstAttribute="top" secondItem="D1T-0S-U83" secondAttribute="top" constant="112" id="Cuc-eC-Kwy"/>
+                            <constraint firstItem="hmR-c2-b2B" firstAttribute="trailing" secondItem="D1T-0S-U83" secondAttribute="trailing" id="IPo-ZP-mHb"/>
                             <constraint firstItem="fjk-2Y-Zzj" firstAttribute="leading" secondItem="D1T-0S-U83" secondAttribute="leading" constant="71" id="Jdc-bv-RBQ"/>
                             <constraint firstItem="D1T-0S-U83" firstAttribute="trailing" secondItem="Fxe-7V-Yuu" secondAttribute="trailing" id="TGq-TK-kvm"/>
+                            <constraint firstAttribute="bottom" secondItem="hmR-c2-b2B" secondAttribute="bottom" id="Uh2-Zf-qRk"/>
                             <constraint firstItem="Aoc-Sw-p7h" firstAttribute="top" secondItem="Fxe-7V-Yuu" secondAttribute="bottom" constant="8" symbolic="YES" id="VZ4-jV-dgD"/>
                             <constraint firstItem="D1T-0S-U83" firstAttribute="trailing" secondItem="Aoc-Sw-p7h" secondAttribute="trailing" constant="85" id="XMr-Sx-WlU"/>
                             <constraint firstItem="Aoc-Sw-p7h" firstAttribute="top" secondItem="Fxe-7V-Yuu" secondAttribute="bottom" constant="8" symbolic="YES" id="ezh-aa-G3W"/>
+                            <constraint firstItem="hmR-c2-b2B" firstAttribute="leading" secondItem="D1T-0S-U83" secondAttribute="leading" id="ldw-Mf-s3g"/>
                             <constraint firstItem="Fxe-7V-Yuu" firstAttribute="leading" secondItem="D1T-0S-U83" secondAttribute="leading" id="rM6-Vi-4Ez"/>
+                            <constraint firstItem="hmR-c2-b2B" firstAttribute="top" secondItem="ekS-2a-tuX" secondAttribute="top" id="vTE-tB-XJs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rCO-ZA-cCf"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="firstPageVC" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="j2J-h4-r0i"/>
+                        <segue destination="sJR-aP-lpP" kind="presentation" identifier="downButton" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="zmR-9C-48w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jy7-Nf-z72" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,17 +289,17 @@
             <objects>
                 <viewController id="sJR-aP-lpP" customClass="downButton" customModule="dumb" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6eU-Mb-fDM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amy" translatesAutoresizingMaskIntoConstraints="NO" id="iQB-NE-NDP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amy" translatesAutoresizingMaskIntoConstraints="NO" id="iQB-NE-NDP">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gHV-Bg-ZxY">
-                                <rect key="frame" x="0.0" y="156" width="414" height="171"/>
+                                <rect key="frame" x="0.0" y="112" width="834" height="171"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqZ-dB-jYM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="q4w-6S-I7D"/>
                                         </constraints>
@@ -249,7 +308,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dumbo?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1o-TP-fYF">
-                                        <rect key="frame" x="0.0" y="75" width="414" height="96"/>
+                                        <rect key="frame" x="0.0" y="75" width="834" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="96" id="QYk-g2-ENy"/>
                                         </constraints>
@@ -269,7 +328,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZ8-Go-h6g" customClass="Buttons" customModule="dumb" customModuleProvider="target">
-                                <rect key="frame" x="71" y="475" width="85" height="66"/>
+                                <rect key="frame" x="71" y="431" width="85" height="66"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
@@ -288,9 +347,12 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="YES">
                                     <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="LlH-fz-5l4" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ire-fu-ocL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcE-g1-GkF" customClass="Buttons" customModule="dumb" customModuleProvider="target">
-                                <rect key="frame" x="258" y="573" width="85" height="66"/>
+                                <rect key="frame" x="678" y="529" width="85" height="66"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
@@ -307,8 +369,7 @@
                                     <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="mov:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IP4-EG-sj0"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="b9b-DF-gdx"/>
+                                    <action selector="noButton:" destination="sJR-aP-lpP" eventType="touchUpInside" id="cLP-mA-23Y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -333,12 +394,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EJ7-Q4-W0g"/>
+                    <connections>
+                        <segue destination="x6s-oW-Duu" kind="presentation" identifier="upButton" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="l5b-Q8-wAC"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="firstPageVC" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="8lZ-f7-T8t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yD-wL-C30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1293" y="78"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zmR-9C-48w"/>
+        <segue reference="l5b-Q8-wAC"/>
+        <segue reference="l70-CP-sTR"/>
+        <segue reference="j2J-h4-r0i"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="amy" width="187.5" height="407.5"/>
         <systemColor name="systemBackgroundColor">

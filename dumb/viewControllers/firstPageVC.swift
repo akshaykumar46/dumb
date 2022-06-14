@@ -25,12 +25,17 @@ class firstPageVC: UIViewController {
 //
 //    }
     
-
-    
-    @IBAction func mov(_ sender: Any) {
-        performSegue(withIdentifier: "dancingButtonSegueViewController", sender: self)
-       
+    @IBAction func noButton(_ sender: Any) {
+        let randomInt=Int.random(in: 1...2)
+        if randomInt==1{
+            performSegue(withIdentifier: "upButton", sender: self)
+        }else{
+            performSegue(withIdentifier: "downButton", sender: self)
+        }
     }
+    
+    
+
     
 }
 

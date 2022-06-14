@@ -15,6 +15,14 @@ class upButton: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func noButton(_ sender: Any) {
+        let randomInt=Int.random(in: 1...2)
+        if randomInt==1{
+            performSegue(withIdentifier: "firstPageVC", sender: self)
+        }else{
+            performSegue(withIdentifier: "downButton", sender: self)
+        }
+    }
+    
 
 }
